@@ -1,14 +1,14 @@
 // Reverse Words Function
-function reverseWords(...words) {
-    return words.map(word => {
-        let reversedWord = '';
-        for (let i = 0; i < word.length; i++) {
-            reversedWord = word[i] + reversedWord;
+function reverseWords(...words) { // создаем функцию reverseWords c параметром ...words (...не ограничное кол-во значений)
+    return words.map(word => { // обращаемся к параметру words, проходимся по всему массиву методом map
+        let reversedWord = ''; // создаем пустую строку
+        for (let i = word.length; i >= 0; i--) { // создаем "обратный" цикл, который проходится по всей длине каждого слова, с конца в начало.
+            reversedWord += word.charAt(i); // применяем метод строки charAt в которую передаем итератор i сохраняем в переменную reversedWord
         }
-        return reversedWord;
+        return reversedWord; // возращаем результат
     });
 }
-console.log(reverseWords('Hello', 'Igor', 'Julia', 'Bishkek'))
+console.log(reverseWords('фронтенд', 'апрель', 'урок', 'Игорь', 'автомобиль')); // выводим результат
 
 // Average Function
 const getAverageNumber = function (...numbers) { 
