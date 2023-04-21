@@ -8,7 +8,6 @@ function reverseWords(...words) {
         return reversedWord;
     });
 }
-
 console.log(reverseWords('Hello', 'Igor', 'Julia', 'Bishkek'))
 
 // Average Function
